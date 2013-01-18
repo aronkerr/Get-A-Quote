@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<modules>
+		<Datadrivendesign_Getaquote>
+			<version>0.1.0</version>
+		</Datadrivendesign_Getaquote>
+	</modules>
+	<frontend>
+		<layout>
+			<updates>
+				<getaquote>
+					<file>getaquote.xml</file>
+				</getaquote>
+			</updates>		
+		</layout>
+		<routers>
+			<getaquote>
+				<use>standard</use>
+				<args>
+					<module>Datadrivendesign_Getaquote</module>
+					<frontName>getaquote</frontName>					
+				</args>
+			</getaquote>
+		</routers>
+	</frontend>
+	<global>
+		<helpers>
+			<getaquote>
+				<class>Datadrivendesign_Getaquote_Helper</class>
+			</getaquote>
+		</helpers>
+		<template>
+			<email>
+				<customer_getaquote_getaquote_email_template translate="label" module="getaquote">
+					<label>Get a Quote Email Template</label>
+					<file>getaquote/getaquote_email.html</file>
+					<type>html</type>
+				</customer_getaquote_getaquote_email_template>
+			</email>
+		</template>
+	</global>
+</config>
